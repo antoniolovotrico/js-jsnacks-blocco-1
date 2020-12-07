@@ -1,32 +1,26 @@
-//// JSnack 8 //// Scrivi una funzione che accetti tre argomenti:un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
+//// JSnack 9 //// Scrivi una funzione che accetti tre argomenti:un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
 
-var arrUno = [];
+var arrIniziale = [];
 for (var i = 0; i < 10; i++) {
     var arrEle = Math.floor(Math.random() * (20 - 1)) + 1;
-    arrUno.push(arrEle);    
+    arrIniziale.push(arrEle);    
 } 
-var b = Math.floor(Math.random() * (arrUno.length - 1)) + 1; 
-var a = Math.floor(Math.random() * (b - 1)) + 1;
+var b = Math.floor(Math.random() * (arrIniziale.length - 1)) + 1; 
+var a = Math.floor(Math.random() * (b - 2)) + 1;
 
 
-console.log(arrUno);
+console.log(arrIniziale);
 console.log(a);
 console.log(b);
-var arrDue = [];
-for (var j = a; j < b; j++){
-    var arrFinal = Math.floor(Math.random() * (20 - 1)) + 1;
-    arrDue.push(arrFinal);
+var arrFinale = [];
+
+function arrCreation(arrDue,num1,num2){
+    for (var j = num1; j < num2; j++){
+        var arrFinal = Math.floor(Math.random() * (20 - 1)) + 1;
+        arrDue.push(arrFinal);
+    }
+    return arrDue
 }
 
-console.log(arrDue);
-
-
-function arrCreation(arrUno,a,b){
-
-    
-        
-    
-    
-}
-
-// arrCreation(arrUno,a,b);
+var result = arrCreation(arrFinale,a,b);
+console.log(result);
